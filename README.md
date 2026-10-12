@@ -6,8 +6,15 @@ Track A (provided case). Built in Techademy's AI-Powered PM Transition Bootcamp.
 Northwind Outdoors' 6-person data team fields roughly 400 ad-hoc business questions a month, with an average 2-day to answer. Decisions sit in that queue the whole time. Self-serve dashboards are stale, so non-analysts can't get a trustworthy number without waiting on someone else, and the stakes are real: Northwind's CEO has said one viral "the AI made up our numbers" moment would kill the deal.
 
 ## Solution
-Pulse is an agentic analytics teammate for Slack and Microsoft Teams. It plans a query, writes the SQL, checks its own work against Northwind's official metric definitions, and answers in plain English, always showing the SQL and the tables it used. When a question is ambiguous, it asks instead of guessing. When it isn't confident, it says so, shows its work, and offers to route the question to a data analyst rather than bluff. It never surfaces personal data it isn't authorized to share.
+Pulse is an agentic analytics teammate for Slack and Microsoft Teams. Five agents work together between the moment a question is asked and the moment the answer is delivered:
 
+1. **Planner:** breaks the question into a query plan.
+2. **Guardrail:** blocks personal data the user is not authorized to see, before any SQL is written.
+3. **Query:** writes the SQL.
+4. **Validator:** checks the result against Northwind's official metric definitions. When confidence is low, it triggers the handoff to a data analyst.
+5. **Narrator:** explains the answer in plain English, always showing the SQL and the tables used.
+
+When a question is ambiguous, Pulse asks a clarifying question before it answers. When it is not confident, it says so, shows its work, and offers to route the question to a data analyst.
 ## Demo
 [60-second demo recording](https://www.loom.com/share/b1d3eb5eec4144eb840edb87c5735f09)
 
